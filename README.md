@@ -18,8 +18,9 @@ This project requires wxWidgets. On Windows platform, the visual studio project 
 
 # Tools
 
-Visual Studio 2013
+* Visual Studio 2013 on Windows
+* G++ & GNU Make on Linux
 
 # Binary
 
-The output executables are statically linked.
+The output executables for Windows are statically linked. For Linux, the makefile is written using "wx-config" settings.
