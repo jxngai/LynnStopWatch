@@ -4,4 +4,8 @@
 znSingleton::znSingleton()
 {
     wxGetApp().AddChild(this);
-};
+}
+
+znSingleton::~znSingleton()
+{
+}

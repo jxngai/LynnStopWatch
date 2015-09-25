@@ -1,4 +1,4 @@
-#include "znConstants.h"
+﻿#include "znConstants.h"
 
 #include "znApp.h"
 #include "znFrame.h"
@@ -44,14 +44,16 @@ void znApp::OnKeyDown(wxKeyEvent& event)
 
     if (event.GetKeyCode() == WXK_PAGEUP || event.GetKeyCode() == WXK_LEFT)
     {
-        znSingleton::GetInstance<znControllerUi>().OnStartStopTimer(wxCommandEvent());
+        wxCommandEvent event;
+        znSingleton::GetInstance<znControllerUi>().OnStartStopTimer(event);
 
         return;
     }
 
     if (event.GetKeyCode() == WXK_PAGEDOWN || event.GetKeyCode() == WXK_RIGHT)
     {
-        znSingleton::GetInstance<znControllerUi>().OnResetLapTimer(wxCommandEvent());
+        wxCommandEvent event;
+        znSingleton::GetInstance<znControllerUi>().OnResetLapTimer(event);
 
         return;
     }
@@ -60,7 +62,7 @@ void znApp::OnKeyDown(wxKeyEvent& event)
     {
         // Ctrl + A
         // Select all text in the output window.
-		wxTextCtrl *text_control = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_TXT_OUTPUT_TEXT), wxTextCtrl);
+        wxTextCtrl *text_control = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_TXT_OUTPUT_TEXT), wxTextCtrl);
 
         if (text_control != NULL)
         {
@@ -80,7 +82,7 @@ void znApp::OnKeyDown(wxKeyEvent& event)
             // so do not delete them in the app.
 
             wxString str;
-			wxTextCtrl *text_control = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_TXT_OUTPUT_TEXT), wxTextCtrl);
+            wxTextCtrl *text_control = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_TXT_OUTPUT_TEXT), wxTextCtrl);
 
             if (text_control != NULL)
             {
@@ -89,23 +91,23 @@ void znApp::OnKeyDown(wxKeyEvent& event)
 
             if (str == wxEmptyString)
             {
-				wxStaticText *static_text = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_STATIC_TXT_DIGIT_M1), wxStaticText);
+                wxStaticText *static_text = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_STATIC_TXT_DIGIT_M1), wxStaticText);
                 str += static_text->GetLabel();
 
-				static_text = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_STATIC_TXT_DIGIT_M2), wxStaticText);
+                static_text = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_STATIC_TXT_DIGIT_M2), wxStaticText);
                 str += static_text->GetLabel();
 
                 str += wxT(":");
 
-				static_text = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_STATIC_TXT_DIGIT_S1), wxStaticText);
+                static_text = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_STATIC_TXT_DIGIT_S1), wxStaticText);
                 str += static_text->GetLabel();
 
-				static_text = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_STATIC_TXT_DIGIT_S2), wxStaticText);
+                static_text = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_STATIC_TXT_DIGIT_S2), wxStaticText);
                 str += static_text->GetLabel();
 
                 str += wxT(".");
 
-				static_text = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_STATIC_TXT_DIGIT_U1), wxStaticText);
+                static_text = wxDynamicCast(wxWindow::FindWindowById(ID_ZN_STATIC_TXT_DIGIT_U1), wxStaticText);
                 str += static_text->GetLabel();
             }
 

@@ -20,7 +20,7 @@ private:
     wxDECLARE_NO_COPY_CLASS(znSingleton);
 
 protected:
-    virtual ~znSingleton() = 0 {};
+    virtual ~znSingleton() = 0;
 
 public:
     template <class T>

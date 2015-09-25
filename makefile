@@ -38,6 +38,8 @@ CXX_SOURCELIST += znFrame.cpp
 CXX_SOURCELIST += znModel.cpp
 CXX_SOURCELIST += znTimeThread.cpp
 CXX_SOURCELIST += znControllerUi.cpp
+CXX_SOURCELIST += znSingleton.cpp
+CXX_SOURCELIST += znSingletonParent.cpp
 
 CC_OBJECTLIST = $(addprefix $(OBJ_DIRECTORY), $(CC_SOURCELIST:.c=.o))
 
