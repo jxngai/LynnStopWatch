@@ -17,3 +17,4 @@ Visual Studio 2013
 
 # Binary
 The output executables are statically linked.
+
