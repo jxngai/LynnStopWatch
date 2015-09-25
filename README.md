@@ -1,6 +1,6 @@
 # LynnStopWatch
 
-Lynn Stop Watch is a simple project using wxWidgets.
+Lynn Stop Watch is a simple project using wxWidgets. The same source codes can be compiled for different platforms.
 
 # Architecture
 
