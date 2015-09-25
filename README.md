@@ -2,6 +2,8 @@
 
 Lynn Stop Watch is a simple project using wxWidgets. The same source codes can be compiled for different platforms.
 
+![Lynn Stop Watch](http://www.justuke.com/images/github/lynnstopwatch_01.png)
+
 # Architecture
 
 Lynn Stop Wath is designed with MVC in mind. Its model and controller are Singleton with lazy initialization.
