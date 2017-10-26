@@ -9,6 +9,7 @@
 znTimeThread::znTimeThread()
 	: wxThread(wxTHREAD_JOINABLE), m_flag_abort(false)
 {
+    wxLogDebug(wxT("<<< znTimeThread::znTimeThread() >>>"));
     Run();
 }
 
