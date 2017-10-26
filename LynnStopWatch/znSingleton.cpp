@@ -3,7 +3,7 @@
 
 znSingleton::znSingleton()
 {
-    wxGetApp().AddChild(this);
+    wxGetApp().AddSingletonChild(this);
 }
 
 znSingleton::~znSingleton()

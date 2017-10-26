@@ -1,12 +1,17 @@
 #include "znSingletonParent.h"
 #include "znSingleton.h"
 
-void znSingletonParent::AddChild(wxAny any)
+void znSingletonParent::AddSingletonChild(wxAny any)
 {
-    wxLogDebug(wxT("<<< znSingletonParent::AddChild() >>>"));
+    wxLogDebug("<<< znSingletonParent::AddSingletonChild() >>>");
 
     // This function is for objects to add znApp as parent. So that
     // znApp will destroy the object when znApp's destructor is called.
+
+    // Only add object of type "znSingleton".
+    if (any.CheckType<znSingleton*>() == false) return;
+
+    // Note that "any.As<znSingleton*>()" is a pointer to the object.
 
     for (unsigned int ix = 0; ix < m_children_list.size(); ix++)
     {

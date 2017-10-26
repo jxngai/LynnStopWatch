@@ -7,7 +7,7 @@
 class znSingletonParent
 {
 public:
-    void AddChild(wxAny);
+    void AddSingletonChild(wxAny);
 
 protected:
     ~znSingletonParent();

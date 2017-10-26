@@ -5,22 +5,19 @@
 
 class znTimeThread : private wxThread
 {
+public:
     znTimeThread();
 	~znTimeThread();
 
+private:
     wxThread::ExitCode Entry();
     void OnExit();
 
 	bool TestDestroy();
-	void DestroyThread();
-
-public:
-    static void StartThread(znTimeThread *&);
-    static void TerminateThread(znTimeThread *&);
 
 private:
-	bool					m_flag_abort;
-	wxCriticalSection		m_cs_flag_abort;
+	bool					    m_flag_abort;
+	wxCriticalSection		m_flag_abort_cs;
 };
 
 #endif

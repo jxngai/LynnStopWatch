@@ -28,7 +28,10 @@ void znControllerUi::OnClose(wxCloseEvent& event)
 	// m_time_thread object is deleted and
 	// m_time_thread will be set to NULL.
 
-	znTimeThread::TerminateThread(m_time_thread);
+    znTimeThread *cache_ptr = m_time_thread;
+    m_time_thread = NULL;
+
+    delete cache_ptr;
 
 	// Need to Skip() so that the event can continue to be processed.
 	event.Skip();
@@ -109,8 +112,13 @@ void znControllerUi::OnStartStopTimer(wxCommandEvent& event)
 	{
 		if (button->GetLabel() == wxT("Start"))
 		{
+            znTimeThread *cache_ptr = m_time_thread;
+            m_time_thread = NULL;
+
+            delete cache_ptr;
+
 			// Start the timer
-			znTimeThread::StartThread(m_time_thread);
+            m_time_thread = new znTimeThread();
 
 			if (m_time_thread != NULL)
 			{
@@ -127,7 +135,10 @@ void znControllerUi::OnStartStopTimer(wxCommandEvent& event)
 		else
 		{
 			// Stop the timer.
-			znTimeThread::TerminateThread(m_time_thread);
+            znTimeThread *cache_ptr = m_time_thread;
+            m_time_thread = NULL;
+
+            delete cache_ptr;
 
 			button->SetLabel(wxT("Start"));
 
@@ -192,7 +203,10 @@ void znControllerUi::OnTimerThreadCompletion(wxThreadEvent& event)
 	znSingleton::GetInstance<znModel>().SetOffsetTime();
 	znSingleton::GetInstance<znModel>().SetOffsetTimeLap();
 
-	znTimeThread::TerminateThread(m_time_thread);
+    znTimeThread *cache_ptr = m_time_thread;
+    m_time_thread = NULL;
+
+    delete cache_ptr;
 
 	wxLogDebug(wxT("<<< znControllerUi::OnTimerThreadCompletion() >>> .. Done"));
 }
