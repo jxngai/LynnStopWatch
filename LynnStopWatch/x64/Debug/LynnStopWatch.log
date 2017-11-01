@@ -1,0 +1,11 @@
+﻿  znTimeThread.cpp
+  znSingletonParent.cpp
+  znSingleton.cpp
+  znModel.cpp
+  znFrame.cpp
+  znDialogAbout.cpp
+  znControllerUi.cpp
+  znApp.cpp
+  Generating Code...
+  LynnStopWatch.vcxproj -> D:\data\CloudStation\Projects\cpp\VisualStudio\Released\LynnStopWatch\x64\Debug\LynnStopWatch.exe
+  LynnStopWatch.vcxproj -> D:\data\CloudStation\Projects\cpp\VisualStudio\Released\LynnStopWatch\x64\Debug\LynnStopWatch.pdb (Partial PDB)
