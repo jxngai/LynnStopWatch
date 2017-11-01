@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LynnStopWatch", "LynnStopWatch\LynnStopWatch.vcxproj", "{B8C2218D-4768-496F-AF68-0D40EFE5DE24}"
 EndProject
@@ -17,16 +17,21 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Debug|Win32.ActiveCfg = Debug|Win32
 		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Debug|Win32.Build.0 = Debug|Win32
-		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Debug|x64.ActiveCfg = Debug|Win32
+		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Debug|x64.ActiveCfg = Debug|x64
+		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Debug|x64.Build.0 = Debug|x64
 		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Debug|x86.ActiveCfg = Debug|Win32
 		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Debug|x86.Build.0 = Debug|Win32
 		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Release|Win32.ActiveCfg = Release|Win32
 		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Release|Win32.Build.0 = Release|Win32
-		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Release|x64.ActiveCfg = Release|Win32
+		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Release|x64.ActiveCfg = Release|x64
+		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Release|x64.Build.0 = Release|x64
 		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Release|x86.ActiveCfg = Release|Win32
 		{B8C2218D-4768-496F-AF68-0D40EFE5DE24}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {825D6C41-541C-43FE-88C5-0ADB10591481}
 	EndGlobalSection
 EndGlobal
